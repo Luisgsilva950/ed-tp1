@@ -35,11 +35,11 @@ TMPOUT=tp1.testresult
 # CMD sao os comandos necessarios para executar a regra (por exemplo, chamar o
 # gcc)
 
-$(EXEC): main.cc foo.o
-	$(CC) $(CFLAGS) main.cc foo.o -o $(EXEC)
+$(EXEC): main.cc
+	$(CC) $(CFLAGS) main.cc -o $(EXEC)
 
-foo.o: headers/foo.cc # esse eh um exemplo, nao utilize esse tipo de nome (foo.cc, foo.h, foo.o) para seus arquivos
-	$(CC) $(CFLAGS) -c headers/foo.cc -o foo.o
+#foo.o: headers/foo.cc # esse eh um exemplo, nao utilize esse tipo de nome (foo.cc, foo.h, foo.o) para seus arquivos
+#	$(CC) $(CFLAGS) -c headers/foo.cc -o foo.o
 
 test: $(EXEC)
 	@bash run_tests.sh $(EXEC) $(TMPOUT)
