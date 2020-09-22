@@ -80,13 +80,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/strider/CLionProjects/ed-tp1/List/List.h">
+		<Unit filename="/Users/strider/CLionProjects/ed-tp1/src/headers/List/List.h">
 			<Option target="ed_tp1"/>
 		</Unit>
-		<Unit filename="/Users/strider/CLionProjects/ed-tp1/Node/Node.h">
+		<Unit filename="/Users/strider/CLionProjects/ed-tp1/src/headers/Node/Node.h">
 			<Option target="ed_tp1"/>
 		</Unit>
-		<Unit filename="/Users/strider/CLionProjects/ed-tp1/main.cpp">
+		<Unit filename="/Users/strider/CLionProjects/ed-tp1/src/main.cc">
 			<Option target="ed_tp1"/>
 		</Unit>
 		<Unit filename="/Users/strider/CLionProjects/ed-tp1/CMakeLists.txt">

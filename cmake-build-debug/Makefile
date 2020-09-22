@@ -143,32 +143,32 @@ ed_tp1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp1.dir/build.make CMakeFiles/ed_tp1.dir/build
 .PHONY : ed_tp1/fast
 
-main.o: main.cpp.o
+src/main.o: src/main.cc.o
 
-.PHONY : main.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp1.dir/build.make CMakeFiles/ed_tp1.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp1.dir/build.make CMakeFiles/ed_tp1.dir/src/main.cc.o
+.PHONY : src/main.cc.o
 
-main.i: main.cpp.i
+src/main.i: src/main.cc.i
 
-.PHONY : main.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp1.dir/build.make CMakeFiles/ed_tp1.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp1.dir/build.make CMakeFiles/ed_tp1.dir/src/main.cc.i
+.PHONY : src/main.cc.i
 
-main.s: main.cpp.s
+src/main.s: src/main.cc.s
 
-.PHONY : main.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp1.dir/build.make CMakeFiles/ed_tp1.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed_tp1.dir/build.make CMakeFiles/ed_tp1.dir/src/main.cc.s
+.PHONY : src/main.cc.s
 
 # Help Target
 help:
@@ -179,9 +179,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ed_tp1"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

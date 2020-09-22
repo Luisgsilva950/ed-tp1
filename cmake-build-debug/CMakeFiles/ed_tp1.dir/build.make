@@ -77,27 +77,27 @@ include CMakeFiles/ed_tp1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ed_tp1.dir/flags.make
 
-CMakeFiles/ed_tp1.dir/main.cpp.o: CMakeFiles/ed_tp1.dir/flags.make
-CMakeFiles/ed_tp1.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/strider/CLionProjects/ed-tp1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ed_tp1.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ed_tp1.dir/main.cpp.o -c /Users/strider/CLionProjects/ed-tp1/main.cpp
+CMakeFiles/ed_tp1.dir/src/main.cc.o: CMakeFiles/ed_tp1.dir/flags.make
+CMakeFiles/ed_tp1.dir/src/main.cc.o: ../src/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/strider/CLionProjects/ed-tp1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ed_tp1.dir/src/main.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ed_tp1.dir/src/main.cc.o -c /Users/strider/CLionProjects/ed-tp1/src/main.cc
 
-CMakeFiles/ed_tp1.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ed_tp1.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/strider/CLionProjects/ed-tp1/main.cpp > CMakeFiles/ed_tp1.dir/main.cpp.i
+CMakeFiles/ed_tp1.dir/src/main.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ed_tp1.dir/src/main.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/strider/CLionProjects/ed-tp1/src/main.cc > CMakeFiles/ed_tp1.dir/src/main.cc.i
 
-CMakeFiles/ed_tp1.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ed_tp1.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/strider/CLionProjects/ed-tp1/main.cpp -o CMakeFiles/ed_tp1.dir/main.cpp.s
+CMakeFiles/ed_tp1.dir/src/main.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ed_tp1.dir/src/main.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/strider/CLionProjects/ed-tp1/src/main.cc -o CMakeFiles/ed_tp1.dir/src/main.cc.s
 
 # Object files for target ed_tp1
 ed_tp1_OBJECTS = \
-"CMakeFiles/ed_tp1.dir/main.cpp.o"
+"CMakeFiles/ed_tp1.dir/src/main.cc.o"
 
 # External object files for target ed_tp1
 ed_tp1_EXTERNAL_OBJECTS =
 
-ed_tp1: CMakeFiles/ed_tp1.dir/main.cpp.o
+ed_tp1: CMakeFiles/ed_tp1.dir/src/main.cc.o
 ed_tp1: CMakeFiles/ed_tp1.dir/build.make
 ed_tp1: CMakeFiles/ed_tp1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/strider/CLionProjects/ed-tp1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ed_tp1"
