@@ -40,7 +40,7 @@ public:
             this->last = newNode;
         } else {
             newNode->setNext(this->first);
-            first->setPrevious(newNode);
+            this->first->setPrevious(newNode);
             this->first = newNode;
         }
     }
@@ -49,9 +49,15 @@ public:
         return this->first->getValue();
     }
 
+    void popLast() {
+        Node<T> *previousNode = this->last->getPreviousNode();
+        if (!previousNode->isNull()) previousNode->setNext(nullptr);
+        this->last = previousNode;
+    }
+
     void popFirst() {
         Node<T> *nextNode = this->first->getNextNode();
-        nextNode->setPrevious(nullptr);
+        if (!nextNode->isNull()) nextNode->setPrevious(nullptr);
         this->first = nextNode;
     }
 
@@ -64,6 +70,34 @@ public:
             this->last->setNext(newNode);
             this->last = newNode;
         }
+    }
+
+    void removeByValue(T value) {
+        if (this->first->getValue() == value) {
+            this->popFirst();
+        } else if (this->last->getValue() == value) {
+            this->popLast();
+        } else {
+            Node<T> *node = this->first;
+            while (!node->isNull()) {
+                if (node->getValue() == value) {
+                    Node<T> *before = node->getPreviousNode();
+                    Node<T> *after = node->getNextNode();
+                    if (!before->isNull()) {
+                        before->setNext(after);
+                    } else if (!after->isNull()) {
+                        after->setPrevious(nullptr);
+                    }
+                    if (!after->isNull()) {
+                        after->setPrevious(before);
+                    } else if (!before->isNull()) {
+                        before->setNext(nullptr);
+                    }
+                }
+                node = node->getNextNode();
+            }
+        }
+
     }
 
     void showList() {

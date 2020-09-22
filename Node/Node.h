@@ -37,6 +37,10 @@ public:
     void setPrevious(Node *node) {
         this->previous = node;
     }
+
+    bool isNull() {
+        return this == nullptr;
+    }
 };
 
 

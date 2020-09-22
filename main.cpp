@@ -37,6 +37,7 @@ int main() {
                 ships.popFirst();
                 break;
             case REPAIRED_SHIP:
+                cout << "Ship " << broken.getFirst() << " repaired." << endl;
                 ships.insertOnFront(broken.getFirst());
                 broken.popFirst();
                 break;
@@ -49,14 +50,17 @@ int main() {
                 broken.showList();
                 break;
             default:
-                //TODO: Implement the get item with value K on List and remove Item of the position;
                 cout << "Ship " << action << " broken." << endl;
+                broken.insertOnLast(action);
+                war.removeByValue(action);
                 break;
         }
     }
 
     cout << "WAITING SHIPS:" << endl;
     ships.showList();
+    cout << "ON BROKEN:" << endl;
+    broken.showList();
     cout << "ON WAR:" << endl;
     war.showList();
 
