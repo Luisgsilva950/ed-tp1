@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/strider/CLionProjects/ed-tp1/List/List.h
+iostream
+-
+../Node/Node.h
+/Users/strider/CLionProjects/ed-tp1/Node/Node.h
+
+/Users/strider/CLionProjects/ed-tp1/Node/Node.h
+
+/Users/strider/CLionProjects/ed-tp1/main.cpp
+iostream
+-
+cstdio
+-
+List/List.h
+/Users/strider/CLionProjects/ed-tp1/List/List.h
+
