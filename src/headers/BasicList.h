@@ -45,18 +45,6 @@ public:
         }
     }
 
-    void popLast() {
-        Node<T> *previousNode = this->last->getPreviousNode();
-        if (!previousNode->isNull()) previousNode->setNext(nullptr);
-        this->last = previousNode;
-    }
-
-    void popFirst() {
-        Node<T> *nextNode = this->first->getNextNode();
-        if (!nextNode->isNull()) nextNode->setPrevious(nullptr);
-        this->first = nextNode;
-    }
-
     void removeByValue(T value) {
         if (this->first->getValue() == value) {
             this->popFirst();
