@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../Node/Node.h"
+#include "Node.h"
 //
 // Created by @Luis G. on 21/09/20.
 // Was necessary implement the methods in .h file because i wanted use templates.
@@ -10,22 +10,22 @@ using namespace std;
 #define ED_TP1_LIST_H
 
 template<class T>
-class List {
+class BasicList {
 private:
     Node<T> *first;
     Node<T> *last;
 public:
-    List() {
+    BasicList() {
         this->first = nullptr;
         this->last = nullptr;
     }
 
-    explicit List(T value) {
+    explicit BasicList(T value) {
         this->first = new Node<T>(value);
         this->last = nullptr;
     }
 
-    ~List() {
+    ~BasicList() {
         this->first = nullptr;
     }
 
@@ -34,7 +34,7 @@ public:
     }
 
     void insertOnFront(T value) {
-        auto *newNode = new Node<T>(value);
+        Node<int> *newNode = new Node<T>(value);
         if (isEmpty()) {
             this->first = newNode;
             this->last = newNode;
@@ -43,10 +43,6 @@ public:
             this->first->setPrevious(newNode);
             this->first = newNode;
         }
-    }
-
-    T getFirst() {
-        return this->first->getValue();
     }
 
     void popLast() {
@@ -59,17 +55,6 @@ public:
         Node<T> *nextNode = this->first->getNextNode();
         if (!nextNode->isNull()) nextNode->setPrevious(nullptr);
         this->first = nextNode;
-    }
-
-    void insertOnLast(T value) {
-        auto *newNode = new Node<T>(value);
-        if (isEmpty()) {
-            this->first = newNode;
-            this->last = newNode;
-        } else {
-            this->last->setNext(newNode);
-            this->last = newNode;
-        }
     }
 
     void removeByValue(T value) {
@@ -98,16 +83,6 @@ public:
             }
         }
 
-    }
-
-    void showList() {
-        if (!this->isEmpty()) {
-            Node<T> *element = this->first;
-            while (element) {
-                std::cout << element->getValue() << std::endl;
-                element = element->getNextNode();
-            }
-        }
     }
 };
 

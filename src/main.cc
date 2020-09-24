@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdio>
-#include "./headers/List/List.h"
+#include "headers/BasicList.h"
+#include "headers/Stack.h"
+#include "headers/Queue.h"
 
 using namespace std;
 
@@ -14,30 +16,30 @@ enum ACTIONS {
 
 int main() {
     int N = 0;
-    List<int> ships = *new List<int>();
-    List<int> broken = *new List<int>();
-    List<int> war = *new List<int>();
+    Stack<int> ships = *new Stack<int>();
+    Queue<int> broken = *new Queue<int>();
+    BasicList<int> war = *new BasicList<int>();
 
-   cin >> N;
+    cin >> N;
 
     for (int i = 0; i < N; i++) {
         int shipId = 0;
         cin >> shipId;
-        ships.insertOnFront(shipId);
+        ships.insert(shipId);
     }
 
     int action;
     while (scanf("%d", &action) != EOF) {
         switch (action) {
             case SEND_SHIP_TO_WAR:
-                cout << "nave " << ships.getFirst() << " em combate" << endl;
-                war.insertOnFront(ships.getFirst());
-                ships.popFirst();
+                cout << "nave " << ships.get() << " em combate" << endl;
+                war.insertOnFront(ships.get());
+                ships.pop();
                 break;
             case REPAIRED_SHIP:
-                cout << "nave " << broken.getFirst() << " consertada" << endl;
-                ships.insertOnFront(broken.getFirst());
-                broken.popFirst();
+                cout << "nave " << broken.get() << " consertada" << endl;
+                ships.insert(broken.get());
+                broken.pop();
                 break;
             case PRINT_WAITING_SHIPS:
                 ships.showList();
@@ -47,7 +49,7 @@ int main() {
                 break;
             default:
                 cout << "nave " << action << " avariada" << endl;
-                broken.insertOnLast(action);
+                broken.insert(action);
                 war.removeByValue(action);
                 break;
         }
