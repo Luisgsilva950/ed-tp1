@@ -80,10 +80,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/strider/CLionProjects/ed-tp1/src/headers/List/List.h">
+		<Unit filename="/Users/strider/CLionProjects/ed-tp1/src/headers/BasicList.h">
 			<Option target="ed_tp1"/>
 		</Unit>
-		<Unit filename="/Users/strider/CLionProjects/ed-tp1/src/headers/Node/Node.h">
+		<Unit filename="/Users/strider/CLionProjects/ed-tp1/src/headers/Node.h">
+			<Option target="ed_tp1"/>
+		</Unit>
+		<Unit filename="/Users/strider/CLionProjects/ed-tp1/src/headers/Queue.h">
+			<Option target="ed_tp1"/>
+		</Unit>
+		<Unit filename="/Users/strider/CLionProjects/ed-tp1/src/headers/Stack.h">
 			<Option target="ed_tp1"/>
 		</Unit>
 		<Unit filename="/Users/strider/CLionProjects/ed-tp1/src/main.cc">

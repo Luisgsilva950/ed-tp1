@@ -6,19 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/Users/strider/CLionProjects/ed-tp1/src/headers/List/List.h
+/Users/strider/CLionProjects/ed-tp1/src/headers/BasicList.h
 iostream
 -
-../Node/Node.h
-/Users/strider/CLionProjects/ed-tp1/src/headers/Node/Node.h
+Node.h
+/Users/strider/CLionProjects/ed-tp1/src/headers/Node.h
 
-/Users/strider/CLionProjects/ed-tp1/src/headers/Node/Node.h
+/Users/strider/CLionProjects/ed-tp1/src/headers/Node.h
+
+/Users/strider/CLionProjects/ed-tp1/src/headers/Queue.h
+iostream
+-
+Node.h
+/Users/strider/CLionProjects/ed-tp1/src/headers/Node.h
+
+/Users/strider/CLionProjects/ed-tp1/src/headers/Stack.h
+iostream
+-
+Node.h
+/Users/strider/CLionProjects/ed-tp1/src/headers/Node.h
 
 /Users/strider/CLionProjects/ed-tp1/src/main.cc
 iostream
 -
 cstdio
 -
-./headers/List/List.h
-/Users/strider/CLionProjects/ed-tp1/src/headers/List/List.h
+headers/BasicList.h
+/Users/strider/CLionProjects/ed-tp1/src/headers/BasicList.h
+headers/Stack.h
+/Users/strider/CLionProjects/ed-tp1/src/headers/Stack.h
+headers/Queue.h
+/Users/strider/CLionProjects/ed-tp1/src/headers/Queue.h
 
