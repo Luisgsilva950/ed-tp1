@@ -5,6 +5,12 @@
 #ifndef ED_TP1_NODE_H
 #define ED_TP1_NODE_H
 
+/**
+ * This class is a Node for implement the TAD`s of project. Has 3 attributes, the value, the next, representing the next node of TAD
+ * and the previous, representing the previous node of TAD.
+ *
+ * @tparam T Represent the type that will be stored in the TAD.
+ */
 template<class T>
 class Node {
 private:

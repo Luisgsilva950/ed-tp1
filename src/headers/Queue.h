@@ -9,6 +9,11 @@
 #ifndef ED_TP1_QUEUE_H
 #define ED_TP1_QUEUE_H
 
+/**
+ * This class represent the Queue TAD. Only the necessary methods are implemented here.
+ *
+ * @tparam T Represent the type that will be stored in the TAD.
+ */
 template<class T>
 class Queue {
 private:

@@ -9,6 +9,11 @@
 #ifndef ED_TP1_STACK_H
 #define ED_TP1_STACK_H
 
+/**
+ * This class represent the Stack TAD. Only the necessary methods are implementeds here.
+ *
+ * @tparam T Represent the type that will be stored in the TAD.
+ */
 template<class T>
 class Stack {
 private:

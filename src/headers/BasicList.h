@@ -9,6 +9,12 @@ using namespace std;
 #ifndef ED_TP1_LIST_H
 #define ED_TP1_LIST_H
 
+/**
+ * This class represent the basic list doubly chained TAD. Basic because the are not all methods implemented here. Only necessary for
+ * do the School Job.
+ *
+ * @tparam T Represent the type that will be stored in the TAD.
+ */
 template<class T>
 class BasicList {
 private:
@@ -43,6 +49,18 @@ public:
             this->first->setPrevious(newNode);
             this->first = newNode;
         }
+    }
+
+    void popLast() {
+        Node<T> *previousNode = this->last->getPreviousNode();
+        if (!previousNode->isNull()) previousNode->setNext(nullptr);
+        this->last = previousNode;
+    }
+
+    void popFirst() {
+        Node<T> *nextNode = this->first->getNextNode();
+        if (!nextNode->isNull()) nextNode->setPrevious(nullptr);
+        this->first = nextNode;
     }
 
     void removeByValue(T value) {

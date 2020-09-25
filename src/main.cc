@@ -13,21 +13,19 @@ enum ACTIONS {
     PRINT_BROKEN_SHIPS = -3
 };
 
-
-int main() {
-    int N = 0;
+Stack<int> getShipIds(int numberOfships){
     Stack<int> ships = *new Stack<int>();
-    Queue<int> broken = *new Queue<int>();
-    BasicList<int> war = *new BasicList<int>();
-
-    cin >> N;
-
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < numberOfships; i++) {
         int shipId = 0;
         cin >> shipId;
         ships.insert(shipId);
     }
+    return ships;
+}
 
+void executeWar(Stack<int> ships){
+    Queue<int> broken = *new Queue<int>();
+    BasicList<int> war = *new BasicList<int>();
     int action;
     while (scanf("%d", &action) != EOF) {
         switch (action) {
@@ -54,5 +52,12 @@ int main() {
                 break;
         }
     }
+}
+
+int main() {
+    int N = 0;
+    cin >> N;
+    Stack<int> ships = getShipIds(N);
+    executeWar(ships);
     return 0;
 }
